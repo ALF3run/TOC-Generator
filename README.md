@@ -9,7 +9,7 @@ The TOC-Generator make use of data-toc attribute to determine its parent element
 The *toc_1.0.0.css* contains some basic styling rules to make the TOC-Generator ready to use but you can customize it the way you like by modifying the file, overriding the *.toc-default* class in an external css, or adding your own class using the [TOC-Generator Options](https://github.com/ALF3run/TOC-Generator/#options) below.
 
 ## How To Use
-Just download the **toc_files** directory put the **js** and **css** folders or their content inside your project root direcotry, then import the *toc_1.0.0.css* and *toc_1.0.0.js* in your .html file. Now the TOC-Generator is ready to use.
+Just put the **js** and **css** folders or their content inside your project root direcotry, then import the *toc_1.0.0.css* and *toc_1.0.0.js* in your .html file. Now the TOC-Generator is ready to use.
 
 In your .html file chose the element you want the table of content generated for and add the attribute **data-toc** to it. For example:
 ```
