@@ -1,7 +1,7 @@
 .toc-default {
     background: rgba(0, 0, 0, 0.1);
     font-size: 0.85em;
-    padding: 1px 10px;
+    padding: 10px;
 }
 .toc-default li::before {
     counter-increment: headers;
