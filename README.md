@@ -6,7 +6,7 @@ A simple, ready to use javascript to add auto generated, super customizable Tabl
 ## How It Works
 The TOC-Generator make use of data-toc attribute to determine its parent element. Then, it select all the <h(n)> tag inside and insert a hierarchically ordered list made out of them to the parent's top. Every tabel of content generated this way has a default id="toc-(nth)", where (nth) is an integer corresponding to the nth generated table, and a default class="toc-default".
 
-The *toc_1.0.0.css* contains some basic styling rules to make the TOC-Generator ready to use but you can customize it the way you like by modifying the file, overriding the *.toc-default* class in an external css, or adding your own class using the [TOC-Generator Options](https://github.com/ALF3run/TOC-Generator/blob/master/README.md#options) below.
+The *toc_1.0.0.css* contains some basic styling rules to make the TOC-Generator ready to use but you can customize it the way you like by modifying the file, overriding the *.toc-default* class in an external css, or adding your own class using the [TOC-Generator Options](https://github.com/ALF3run/TOC-Generator/#options) below.
 
 ## How To Use
 Just put the **js** and **css** directory or their content inside your project root direcotry, then import the *toc_1.0.0.css* and *toc_1.0.0.js* in your .html file. Now the TOC-Generator is ready to use.
