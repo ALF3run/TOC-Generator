@@ -1,0 +1,19 @@
+.toc-default {
+    background: rgba(0, 0, 0, 0.1);
+    font-size: 0.85em;
+    padding: 1px 10px;
+}
+.toc-default li::before {
+    counter-increment: headers;
+    content: counters(headers, ".") ". ";
+    }
+.toc-default ol {
+    counter-reset: headers;
+    list-style-type: none;
+    overflow-x: auto;
+    padding-left: 20px;
+}
+.toc-default span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
