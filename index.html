@@ -3,15 +3,26 @@
     <head>
         <meta charset="utf-8">
         <title>TOC-Generator Example</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="css/toc.css">
     </head>
     <body>
         
         <div class="container">
             <div class="row">
-                
-                <div class="col-md-8">
+
+                <div class="col-md-4 col-md-push-8">
+                    <aside>
+                        <h3>Aside with no TOC</h3>
+                        <h4>Title 4</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et massa justo. Ut vestibulum semper enim, et mattis eros. Cras quam dolor, varius vitae ultrices in, sollicitudin eu erat. Nulla et arcu dignissim, tincidunt libero vel, viverra libero. Ut porta dolor odio, sed molestie lectus bibendum eu. Ut lacus est, eleifend nec massa sit amet, placerat egestas felis. Duis suscipit magna nec maximus efficitur.</p>
+                        <h4>Title 4</h4>
+                        <p>Praesent in pretium ex, sollicitudin accumsan ante. Nulla eu felis dui. Nullam a dolor a nunc rhoncus mollis id sed augue. Nullam vitae nisi ut arcu vulputate molestie. Maecenas id purus non ante consectetur tempus et eu metus. Nunc sed velit venenatis, gravida nunc ac, hendrerit nisi. Mauris sollicitudin orci in dui sollicitudin vulputate.</p>
+                    </aside>
+                </div>
+            
+                <div class="col-md-8 col-md-pull-4">
                     <main data-toc data-toc-id="main-toc" data-toc-class="toc-custom" data-toc-header="TOC Custom Header">
                         <h1>Main with TOC</h1>
                         <h2>Title 2</h2>
@@ -31,16 +42,6 @@
                         <h3>Title 3</h3>
                         <p>Quisque et luctus arcu, sit amet vestibulum ex. Nam posuere leo in dui eleifend, ac mollis lacus sodales. Suspendisse urna libero, bibendum interdum lacus vel, eleifend vehicula lorem. Aliquam in interdum magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultricies pretium justo ut efficitur. Praesent in tortor vitae elit viverra elementum. Fusce non rhoncus arcu.</p>
                     </main>
-                </div>
-                
-                <div class="col-md-4 order-xs-first">
-                    <aside>
-                        <h3>Aside with no TOC</h3>
-                        <h4>Title 4</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et massa justo. Ut vestibulum semper enim, et mattis eros. Cras quam dolor, varius vitae ultrices in, sollicitudin eu erat. Nulla et arcu dignissim, tincidunt libero vel, viverra libero. Ut porta dolor odio, sed molestie lectus bibendum eu. Ut lacus est, eleifend nec massa sit amet, placerat egestas felis. Duis suscipit magna nec maximus efficitur.</p>
-                        <h4>Title 4</h4>
-                        <p>Praesent in pretium ex, sollicitudin accumsan ante. Nulla eu felis dui. Nullam a dolor a nunc rhoncus mollis id sed augue. Nullam vitae nisi ut arcu vulputate molestie. Maecenas id purus non ante consectetur tempus et eu metus. Nunc sed velit venenatis, gravida nunc ac, hendrerit nisi. Mauris sollicitudin orci in dui sollicitudin vulputate.</p>
-                    </aside>
                 </div>
                 
             </div>
