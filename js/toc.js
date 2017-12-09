@@ -76,7 +76,7 @@ function toc(parent, nth) {
         span.addEventListener(
             "click",
             function () {
-                window.scrollTo(0, parent.querySelectorAll('H1, H2, H3, H4, H5, H6')[i+1].offsetTop);
+                parent.querySelectorAll('H1, H2, H3, H4, H5, H6')[i+1].scrollIntoView();
             }
         );
     }
