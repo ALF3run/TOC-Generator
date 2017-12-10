@@ -1,7 +1,7 @@
 # TOC-Generator
 
 ## What is it
-A simple, ready to use javascript to add auto generated, super customizable Table Of Content to any page element. You can see an example of what it does at https://alfr3run.github.io/TOC-Generator.
+A simple, ready to use javascript to add auto generated, super customizable Table Of Content to any page element. You can see an example of what it does at https://alf3run.github.io/TOC-Generator.
 
 ## How It Works
 The TOC-Generator make use of data-toc attribute to determine its parent element. Then, it select all the <h(n)> tag inside and insert a hierarchically ordered list made out of them to the parent's top. Every tabel of content generated this way has a default id="toc-(nth)", where (nth) is an integer corresponding to the nth generated table, and a default class="toc-default".
