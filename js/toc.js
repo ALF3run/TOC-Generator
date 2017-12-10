@@ -5,6 +5,7 @@ window.onload = function() {
 
     parents.forEach(function (parent, nth) {
         toc(parent, nth);
+        tocMakeLinks(parent);
         tocCustomClass(parent);
         tocCustomId(parent);
         tocCustomHeader(parent);
@@ -36,7 +37,6 @@ function toc(parent, nth) {
         span = document.createElement('SPAN');
         text = document.createTextNode(allHeaders[i].innerText);
         span.appendChild(text);
-        tocMakeLinks(span, parent, i);
         listEl.appendChild(span);
         listElArray.push(listEl);
     }
@@ -70,17 +70,27 @@ function toc(parent, nth) {
     tocNode.setAttribute('class', "toc-default");
     tocNode.setAttribute('id', "toc-" + nth);
     parent.insertBefore(tocNode, parent.firstChild);
+}
 
-    // Purpose of code below is to get over the closure problem:
-    // https://stackoverflow.com/questions/750486/javascript-closure-inside-loops-simple-practical-example
-    function tocMakeLinks (span, parent, i) {
-        span.addEventListener(
+
+function tocMakeLinks (parent) {
+    var tocLi = parent.firstChild.querySelectorAll('LI');
+    var tocParentId = parent.getAttribute('data-toc-parent-id');
+    var tocParent = document.getElementById(tocParentId);
+
+    tocLi.forEach(function (liNode, i) {
+        liNode.firstChild.addEventListener(
             "click",
             function () {
-                parent.querySelectorAll('H1, H2, H3, H4, H5, H6')[i+1].scrollIntoView();
+                if (parent.contains(tocParent) || !tocParent) {
+                    parent.querySelectorAll('H1, H2, H3, H4, H5, H6')[i+1].scrollIntoView();
+                }
+                else {
+                    parent.querySelectorAll('H1, H2, H3, H4, H5, H6')[i].scrollIntoView();
+                }
             }
         );
-    }
+    });
 }
 
 // Allow user to add his/her own classes through data-toc-class attribute
@@ -116,8 +126,9 @@ function tocCustomHeader (parent) {
 // Allow user to append toc to a different element then the one it is generated for.
 function tocCustomParent (parent) {
     var tocParentId = parent.getAttribute('data-toc-parent-id');
+    var tocParent = document.getElementById(tocParentId);
 
-    if (tocParentId) {
-        document.getElementById(tocParentId).appendChild(parent.firstChild);
+    if (tocParent) {
+        tocParent.appendChild(parent.firstChild);
     }
 }
