@@ -18,7 +18,7 @@ The *toc.css* contains some basic styling rules to make the TOC-Generator ready 
 Just put the **js** and **css** folders or their content inside your project root direcotry, then import the *toc.css* and *toc.js* in your .html file. Now the TOC-Generator is ready to use.
 
 In your .html file chose the element you want the table of content generated for and add the attribute **data-toc** to it. For example:
-```
+```html
 <div data-toc>
   <h2>Title 1</h2>
   <h3>Title 2</h3>
