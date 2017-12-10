@@ -23,9 +23,7 @@ In your .html file chose the element you want the table of content generated for
 
 ## Options
 You can modify some aspects of the generated tabel of content by adding the data- attribute below to the same element where **data-toc** is:
-1. **data-toc-id** - override the default toc generated id if setted to a not empty value;
-2. **data-toc-class** - allow to add any custom class to your generated table of content. It does not override the default *.toc-default* class;
-3. **data-toc-header** - override the default toc header with a user defined one. If set to *none* (not case sensitive!) it will remove the header.
-
-## Future Features
-- [ ] Custom container: user can set the element wherein the table of content will be appended.
+1. **data-toc-id** - overrides the default toc generated id if setted to a not empty value;
+2. **data-toc-class** - allows to add any custom class to your generated table of content. It does not override the default *.toc-default* class;
+3. **data-toc-header** - overrides the default toc header with a user defined one. If set to *none* (not case sensitive!) it will remove the header;
+4. **data-toc-parent-id** - allows the user to set the element the toc will be appended to by specifying its id.

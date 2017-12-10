@@ -8,6 +8,7 @@ window.onload = function() {
         tocCustomClass(parent);
         tocCustomId(parent);
         tocCustomHeader(parent);
+        tocCustomParent(parent);
     });
 };
 
@@ -109,5 +110,14 @@ function tocCustomHeader (parent) {
     }
     else if (tocHeader) {
         parent.firstChild.firstChild.innerText = tocHeader;
+    }
+}
+
+// Allow user to append toc to a different element then the one it is generated for.
+function tocCustomParent (parent) {
+    var tocParentId = parent.getAttribute('data-toc-parent-id');
+
+    if (tocParentId) {
+        document.getElementById(tocParentId).appendChild(parent.firstChild);
     }
 }
